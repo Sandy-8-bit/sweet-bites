@@ -185,7 +185,7 @@ Where Every Bite is a Celebration
               disabled={!canGoPrev}
               className={`p-2 rounded-full ${
                 canGoPrev 
-                  ? 'bg-white dark:bg-gray-700 shadow-md hover:bg-gray-50 dark:hover:bg-gray-600 text-primary dark:text-primary-light' 
+                  ? 'bg-white dark:bg-gray-700 shadow-md hover:bg-gray-50 v:hover:bg-gray-600 text-primary dark:text-primary-light' 
                   : 'bg-gray-100 dark:bg-gray-800 text-gray-400 cursor-not-allowed'
               } transition-all duration-300`}
               aria-label="Previous testimonial"
