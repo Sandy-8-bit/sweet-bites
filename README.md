@@ -1,6 +1,6 @@
-# Zia Bakery
+# Sweet Bite
 
-Welcome to the Zia Bakery website!
+Welcome to the Sweet Bite website!
 
 This is the first web project that I built using React, while building this website I learned a lot about React concepts ranging from props, components, hooks and others. 
 

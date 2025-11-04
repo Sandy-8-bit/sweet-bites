@@ -1,50 +1,47 @@
-/* eslint-disable react/prop-types */
-import { FaStar } from 'react-icons/fa6'
-import { Button } from '../Elements/Button'
+import { useState } from 'react';
 
 export const CardMenu = ({ children }) => {
-	return (
-		<div className='border shadow-md rounded-2xl p-5 snap-start snap-always group transition-all duration-300 lg:hover:bg-gray-100'>
-			{children}
-		</div>
-	)
-}
-export const Header = ({ image, stars }) => {
-	return (
-		<div className='rounded-t-lg overflow-hidden relative w-[300px] lg:w-[inherit]'>
-			<img
-				className='w-full group-hover:scale-105 transition-all duration-300'
-				src={image}
-				alt='Menu Kami'
-			/>
-			<div className='absolute top-3 left-3'>
-				<div className='px-4 py-2 flex items-center gap-2 bg-pink rounded-3xl'>
-					<FaStar className='fill-yellow-300' />
-					<p className='text-white text-sm font-semibold'>{stars}</p>
-				</div>
-			</div>
-		</div>
-	)
-}
-export const Body = ({ name, children }) => {
-	return (
-		<>
-			<h5 className='font-semibold pt-5'>{name}</h5>
-			<p className='py-3 whitespace-normal'>{children}</p>
-		</>
-	)
-}
-export const Footer = ({ price }) => {
-	return (
-		<div className='flex items-center justify-between pt-3'>
-			<p className='font-bold'>{price}</p>
-			<div className='flex gap-2 items-center'>
-				<Button variant='bg-pink text-white'>Order</Button>
-			</div>
-		</div>
-	)
-}
+  return (
+    <div className='group cursor-pointer snap-start snap-always border border-gray-200 rounded-3xl p-5 hover:border-gray-300 hover:shadow-lg transition-all duration-300'>
+      {children}
+    </div>
+  );
+};
 
-CardMenu.Header = Header
-CardMenu.Body = Body
-CardMenu.Footer = Footer
+export const Header = ({ image }) => {
+  return (
+    <div className='relative overflow-hidden rounded-2xl aspect-square'>
+      <img
+        className='w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out'
+        src={image}
+        alt='Menu Item'
+      />
+      <div className='absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300' />
+    </div>
+  );
+};
+
+export const Body = ({ name, children }) => {
+  return (
+    <div className='mt-4'>
+      <h3 className='text-lg font-semibold text-gray-900 mb-2 group-hover:text-red-600 transition-colors duration-300'>
+        {name}
+      </h3>
+      <p className='text-sm text-gray-600 leading-relaxed line-clamp-2'>
+        {children}
+      </p>
+    </div>
+  );
+};
+
+export const Footer = ({ price }) => {
+  return (
+    <div className='mt-3'>
+      <p className='text-2xl font-bold text-gray-900'>{price}</p>
+    </div>
+  );
+};
+
+CardMenu.Header = Header;
+CardMenu.Body = Body;
+CardMenu.Footer = Footer;

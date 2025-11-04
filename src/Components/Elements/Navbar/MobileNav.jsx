@@ -19,8 +19,8 @@ export default function MobileNav({
 					className='text-left my-2'>
 					<a
 						href={link.link}
-						className='flex items-center gap-3 text-lg py-3 px-3 rounded-lg transition-all hover:bg-pink hover:text-white'>
-						{link.icon}
+						className='flex items-center gap-3 text-lg py-3 px-3 rounded-lg transition-all hover:bg-red-500 hover:text-white'>
+						
 						{link.name}
 					</a>
 				</motion.li>

@@ -8,7 +8,7 @@ export const HeroSection = () => {
 				<div className='text-center text-white pt-20 px-5 md:px-20'>
 					<p className='text-lg tracking-wider'>WELCOME TO</p>
 					<h1 className='font-serif tracking-wide py-3 px-3 my-2 border-t border-b'>
-						Zia Bakery
+						Sweet Bite
 					</h1>
 					<p className='text-lg tracking-wider pb-10'>
 						Professional Artisan Mille Crepes

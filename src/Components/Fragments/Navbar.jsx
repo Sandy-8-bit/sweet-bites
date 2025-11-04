@@ -94,7 +94,7 @@ export const Navbar = () => {
 						<img
 							className='w-8 md:w-10'
 							src='logo.png'
-							alt='Zia Bakery'
+							alt='Sweet Bite'
 						/>
 					</a>
 				</div>
@@ -102,15 +102,11 @@ export const Navbar = () => {
 				{/* Desktop Nav */}
 				<DesktopNav Links={Links} />
 
-				<div className='hidden cursor-pointer group lg:block'>
-					<IoSearch className='w-7 h-7 group-hover:fill-pink active:scale-90' />
-				</div>
+				<div className='w-1'></div>
 
 				{/* Mobile Nav */}
 				<div className='flex gap-2 items-center lg:hidden'>
-					<div className='cursor-pointer'>
-						<IoSearch className='w-8 h-8 active:scale-95' />
-					</div>
+				
 
 					<div onClick={() => setOpen(!open)} className='cursor-pointer'>
 						<CgMenuRightAlt className='w-10 h-10 active:scale-95' />
