@@ -13,7 +13,7 @@ export const ContactOrder = () => {
 						<h4 className='font-serif font-semibold tracking-wider pb-1'>
 							Online Orders & Delivery
 						</h4>
-						<p className='pb-5'>(+91) 98765 43210</p>
+						<p className='pb-5'>(+91) 8431854288</p>
 
 					<Button
   onClick={() =>
