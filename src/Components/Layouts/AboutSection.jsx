@@ -2,7 +2,7 @@ import { IoArrowForward } from 'react-icons/io5'
 import { FaPhone } from 'react-icons/fa6'
 import { Button } from '../Elements/Button'
 import { SectionTitle } from '../Elements/SectionTitle'
-
+import { SocialIcons } from '../../Components/Fragments/SocialIcons'
 export const AboutSection = () => {
 	return (
 		<section id='about' className='px-5 pt-24 lg:px-20'>
@@ -55,7 +55,7 @@ export const AboutSection = () => {
 					</p>
 
 					{/* Contact Section */}
-					<div className='pb-10 flex items-center gap-3'>
+					<div className='pb-3 flex items-center gap-3'>
 						<div className='p-3 bg-light rounded-full'>
 							<FaPhone className='fill-pink w-5 h-5' />
 						</div>
@@ -63,8 +63,11 @@ export const AboutSection = () => {
 							<p className='font-bold'>8431854288</p>
 							<p>Contact Us</p>
 						</div>
+						
 					</div>
-
+<div className='flex-start flex '>
+							<SocialIcons theme='black' />
+						</div>
 				
 				</div>
 			</div>

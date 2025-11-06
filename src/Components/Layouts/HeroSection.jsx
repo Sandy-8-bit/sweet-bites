@@ -11,7 +11,7 @@ export const HeroSection = () => {
 						Sweet Bite
 					</h1>
 					<p className='text-lg tracking-wider pb-10'>
-						Professional Artisan Mille Crepes
+						Homemade | Pure | Healthy
 					</p>
 
 					<SocialIcons />

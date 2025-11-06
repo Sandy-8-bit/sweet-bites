@@ -15,12 +15,18 @@ export const ContactOrder = () => {
 						</h4>
 						<p className='pb-5'>(+91) 98765 43210</p>
 
-						<Button
-							onClick={openPopup}
-							variant='bg-transparent border-2 border-white text-white mx-auto active:scale-100 active:text-dark active:bg-white'
-						>
-							Order Now!
-						</Button>
+					<Button
+  onClick={() =>
+    window.open(
+      "https://wa.me/918431854288?text=Hi!%20I%20would%20like%20to%20place%20an%20order.",
+      "_blank"
+    )
+  }
+  variant="bg-transparent border-2 border-white text-white mx-auto active:scale-100 active:text-dark active:bg-white"
+>
+  Order Now!
+</Button>
+
 					</div>
 				</div>
 			</div>

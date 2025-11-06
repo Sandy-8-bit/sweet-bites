@@ -23,7 +23,7 @@ const services = [
 export const ServiceSection = () => {
 	return (
 		<section id='services' className='px-5 pt-24 lg:px-20'>
-			<SectionTitle>Services</SectionTitle>
+			<SectionTitle>What We Offer</SectionTitle>
 
 			<div className='flex gap-3 flex-col md:flex-row'>
 				{services.map((service) => (

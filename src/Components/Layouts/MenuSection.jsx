@@ -1,18 +1,7 @@
 import React, { useEffect, useState } from 'react';
-
+import itemImage from "/menu/menu.jpg"; 
 
 // utils/preloadImages.js
-export const preloadImages = (imageUrls) => {
-  const promises = imageUrls.map((url) => {
-    return new Promise((resolve, reject) => {
-      const img = new Image();
-      img.src = url;
-      img.onload = resolve;
-      img.onerror = reject;
-    });
-  });
-  return Promise.all(promises);
-};
 
 const menus = [
   {
@@ -117,33 +106,34 @@ const CardMenu = ({ menu }) => {
 
 
 export default function MenuSection() {
-    const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    const imageUrls = menus.map((menu) => menu.image);
-    preloadImages(imageUrls)
-      .then(() => setLoading(false))
-      .catch(() => setLoading(false));
-  }, []);
-  
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center h-screen text-2xl text-red-500">
-        Loading menu...
-      </div>
-    );
-  }
+
+    const handleMoreItemsClick = () => {
+    // Open image in a new tab
+    const imageUrl = itemImage;
+    window.open(imageUrl, "_blank");
+  };
+
+
   return (
     <section id="menu" className="px-5 py-24 lg:px-20 bg-gradient-to-b from-white to-red-50">
       {/* Header */}
+  <div className="px-6 py-10">
       <div className="flex items-center justify-between mb-12">
         <div>
-          <h2 className="text-5xl font-bold text-gray-800 mb-2">
-        <h3 className="text-3xl font-bold text-gray-800 mb-2">Featured <span className="text-red-500">Items</span></h3>
-          </h2>
+          <h3 className="text-3xl font-bold text-gray-800 mb-2">
+            Featured <span className="text-red-500">Items</span>
+          </h3>
           <div className="w-24 h-1 bg-red-500 rounded-full"></div>
         </div>
-  
+
+        <button
+          onClick={handleMoreItemsClick}
+          className="bg-red-500 text-white px-5 py-2 rounded-full font-semibold hover:bg-red-600 transition-all duration-300 shadow-md"
+        >
+          Check Menu
+        </button>
       </div>
+    </div>
 
 
 
@@ -163,7 +153,7 @@ export default function MenuSection() {
     We offer custom orders for special occasions!
   </p>
 <button
-  onClick={() => window.location.href = "mailto:suprithavt@gmail.com"}
+  onClick={() => window.location.href = "https://wa.me/918431854288?text=Hi!%20I%20would%20like%20to%20place%20an%20order."}
   className="bg-white text-red-500 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold sm:font-bold text-base sm:text-lg hover:bg-gray-100 transition-all duration-300 hover:shadow-xl hover:scale-105"
 >
   Contact Us for Custom Orders

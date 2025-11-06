@@ -69,12 +69,15 @@ export const Navbar = () => {
         <DesktopNav Links={Links} />
 
         {/* Order Now Button */}
-        <button
-          onClick={openPopup}
-          className='hidden lg:block bg-red-500 text-white px-5 py-2 rounded-full font-semibold hover:bg-red-600 transition-all duration-300 shadow-md'
-        >
-          Order Now
-        </button>
+     <button
+  onClick={() =>
+    window.open("https://wa.me/918431854288?text=Hi!%20I%20would%20like%20to%20place%20an%20order.", "_blank")
+  }
+  className="hidden lg:block bg-red-500 text-white px-5 py-2 rounded-full font-semibold hover:bg-red-600 transition-all duration-300 shadow-md"
+>
+  Order Now
+</button>
+
 
         {/* Mobile Nav */}
         <div className='flex gap-2 items-center lg:hidden'>
