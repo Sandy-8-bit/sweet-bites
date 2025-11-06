@@ -8,8 +8,8 @@ export const AboutSection = () => {
 		<section id='about' className='px-5 pt-24 lg:px-20'>
 			<div className='flex flex-col gap-5 md:gap-10 md:flex-row'>
 				{/* Image Section */}
-				<div className='bg-[url(../images/about-img.webp)] bg-center bg-cover rounded-2xl overflow-hidden w-full shadow-md'>
-					<div className='flex h-[650px] bg-dark/40 bg-gradient-to-b from-dark'>
+				<div className='bg-[url(/own.jpg)] bg-center bg-cover rounded-2xl overflow-hidden w-full shadow-md'>
+					<div className='flex h-[650px] bg-dark/50'>
 						<div className='self-center text-white px-10 lg:px-20'>
 							<h5 className='font-serif pb-3'>Sweet Bite</h5>
 							<p>
