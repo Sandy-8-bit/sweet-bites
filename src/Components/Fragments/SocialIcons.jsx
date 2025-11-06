@@ -7,22 +7,22 @@ export const SocialIcons = () => {
 	let Icons = [
 		{
 			id: 1,
-			href: '#instagram',
+			href: 'https://www.instagram.com/sweetbite28/',
 			nameIcon: <BsInstagram className='fill-black w-5 h-5' />
 		},
 		{
 			id: 2,
-			href: '#facebook',
+			href: 'https://www.facebook.com/people/sweetbite28/100086718489878/',
 			nameIcon: <FaFacebookSquare className='fill-black w-5 h-5' />
 		},
 		{
 			id: 3,
-			href: '#whatsapp',
+			href: 'https://wa.me/8431854288',
 			nameIcon: <BsWhatsapp className='fill-black w-5 h-5' />
 		},
 		{
 			id: 4,
-			href: '#mail',
+			href: 'mailto:suprithavt@gmail.com',
 			nameIcon: <IoMail className='fill-black w-5 h-5' />
 		}
 	]

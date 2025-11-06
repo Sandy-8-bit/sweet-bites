@@ -1,92 +1,177 @@
-import { IoArrowForward } from 'react-icons/io5'
-import { SectionTitle } from '../Elements/SectionTitle'
-import { CardMenu } from '../Fragments/CardMenu'
-import CircularGallery from '../MyComp/CircularGallery'
+import React, { useEffect, useState } from 'react';
 
-let menus = [
+
+// utils/preloadImages.js
+export const preloadImages = (imageUrls) => {
+  const promises = imageUrls.map((url) => {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.src = url;
+      img.onload = resolve;
+      img.onerror = reject;
+    });
+  });
+  return Promise.all(promises);
+};
+
+const menus = [
   {
     id: 1,
     name: 'Cake',
-    image: 'https://isorepublic.com/wp-content/uploads/2018/11/isorepublic-coffee-cake-cafe-1-1100x733.jpg',
+    image: '/menu/cake.jpg',
     stars: 4.7,
-    description: `Indulge in our freshly baked cakes — moist, rich, and perfect for any celebration.`,
+    description: 'Indulge in our freshly baked cakes — moist, rich, and perfect for any celebration.',
     price: 450
   },
   {
     id: 2,
     name: 'Cupcakes',
-    image: 'https://images.pexels.com/photos/302680/pexels-photo-302680.jpeg',
+    image: '/menu/cupcake.webp',
     stars: 4.6,
-    description: `Delightful mini cakes topped with creamy frosting — the perfect sweet treat for all ages.`,
+    description: 'Delightful mini cakes topped with creamy frosting — the perfect sweet treat for all ages.',
     price: 120
   },
   {
     id: 3,
     name: 'Muffins',
-    image: 'https://images.pexels.com/photos/268310/pexels-photo-268310.jpeg',
+    image: '/menu/muffins.jpg',
     stars: 4.5,
-    description: `Fluffy muffins packed with flavour — ideal for a morning coffee or afternoon snack.`,
+    description: 'Fluffy muffins packed with flavour — ideal for a morning coffee or afternoon snack.',
     price: 90
   },
   {
     id: 4,
     name: 'Brownies',
-    image: 'https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg',
+    image: '/menu/browine.jpg',
     stars: 4.8,
-    description: `Decadent chocolate brownies with a gooey centre — pure indulgence for chocolate lovers.`,
+    description: 'Decadent chocolate brownies with a gooey centre — pure indulgence for chocolate lovers.',
     price: 150
   },
   {
     id: 5,
     name: 'Chocolates',
-    image: 'https://images.pexels.com/photos/933097/pexels-photo-933097.jpeg',
+    image: '/menu/choco.jpg',
     stars: 4.4,
-    description: `Hand-crafted assorted chocolates — a luxe treat for yourself or to gift.`,
+    description: 'Hand-crafted assorted chocolates — a luxe treat for yourself or to gift.',
     price: 200
   },
   {
     id: 6,
     name: 'Healthy Cookies',
-    image: 'https://images.pexels.com/photos/302893/pexels-photo-302893.jpeg',
+    image: '/menu/cookieeee.avif',
     stars: 4.3,
-    description: `Wholesome cookies made with healthier ingredients — guilt-free and delicious.`,
+    description: 'Wholesome cookies made with healthier ingredients — guilt-free and delicious.',
     price: 110
   },
   {
     id: 7,
     name: 'Donuts',
-    image: 'https://images.pexels.com/photos/37312/pexels-photo.jpg',
+    image: '/menu/donuts.jpg',
     stars: 4.2,
-    description: `Soft ring donuts with glazed or filled options — classic comfort in every bite.`,
+    description: 'Soft ring donuts with glazed or filled options — classic comfort in every bite.',
     price: 80
   },
   {
     id: 8,
-    name: 'Teatime Cake & Chocolate Bouquet',
-    image: 'https://isorepublic.com/wp-content/uploads/2018/11/isorepublic-cake-book-tea-1-1100x733.jpg',
+    name: 'Chocolate Bouquet',
+    image: '/menu/rose.jpg',
     stars: 4.5,
-    description: `Enjoy a slice of teatime cake with a curated chocolate bouquet — perfect for sharing or gifting.`,
+    description: ' curated chocolate bouquet — perfect for sharing or gifting.',
     price: 300
   }
 ];
 
+const CardMenu = ({ menu }) => {
+  return (
+    <div className="group relative bg-white rounded-2xl sm:rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 sm:hover:-translate-y-3 cursor-pointer border border-gray-100">
+      
+      {/* Gradient Overlay Effect */}
+      <div className="absolute inset-0 transition-all duration-500 z-10 pointer-events-none" />
 
-export let MenuSection = () => {
-	return (
-		<section id='menu' className='px-5 pt-24 whitespace-nowrap lg:px-20'>
-			<div className='flex items-center justify-between'>
-				<SectionTitle>Our Menu </SectionTitle>
-				<a
-					href='#menu'
-					className='self-start font-semibold pt-1 flex items-center gap-2 group'>
-					All Menu
-					<IoArrowForward className='h-5 w-5 group-hover:translate-x-1 transition-all' />
-				</a>
-			</div>
+      {/* Image Container */}
+      <div className="relative overflow-hidden h-48 sm:h-64 md:h-72">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <img
+          src={menu.image}
+          alt={menu.name}
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+        />
+      </div>
 
-		<div style={{ height: '600px', position: 'relative' }}>
-		  <CircularGallery bend={3} textColor="#FF0000" borderRadius={0.05} scrollEase={0.02}/>
-		</div>
-		</section>
-	)
+      {/* Content */}
+      <div className="relative p-4 sm:p-6 md:p-8 z-10 text-center sm:text-left">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-red-600 transition-colors duration-300">
+          {menu.name}
+        </h3>
+
+        <p className="text-gray-600 text-sm sm:text-base leading-relaxed ">
+          {menu.description}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+
+
+
+
+export default function MenuSection() {
+    const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const imageUrls = menus.map((menu) => menu.image);
+    preloadImages(imageUrls)
+      .then(() => setLoading(false))
+      .catch(() => setLoading(false));
+  }, []);
+  
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen text-2xl text-red-500">
+        Loading menu...
+      </div>
+    );
+  }
+  return (
+    <section id="menu" className="px-5 py-24 lg:px-20 bg-gradient-to-b from-white to-red-50">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-12">
+        <div>
+          <h2 className="text-5xl font-bold text-gray-800 mb-2">
+        <h3 className="text-3xl font-bold text-gray-800 mb-2">Featured <span className="text-red-500">Items</span></h3>
+          </h2>
+          <div className="w-24 h-1 bg-red-500 rounded-full"></div>
+        </div>
+  
+      </div>
+
+
+
+      {/* Menu Grid */}
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-2">
+        {menus.map((menu) => (
+          <CardMenu key={menu.id} menu={menu} />
+        ))}
+      </div>
+
+      {/* Bottom CTA */}
+    <div className="mt-12 sm:mt-16 text-center bg-gradient-to-r from-red-500 to-red-600 rounded-2xl sm:rounded-3xl p-6 sm:p-12 text-white shadow-2xl">
+  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
+    Can't find what you're looking for?
+  </h3>
+  <p className="text-base sm:text-lg md:text-xl mb-5 sm:mb-6 opacity-90">
+    We offer custom orders for special occasions!
+  </p>
+<button
+  onClick={() => window.location.href = "mailto:suprithavt@gmail.com"}
+  className="bg-white text-red-500 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold sm:font-bold text-base sm:text-lg hover:bg-gray-100 transition-all duration-300 hover:shadow-xl hover:scale-105"
+>
+  Contact Us for Custom Orders
+</button>
+
+
+</div>
+
+    </section>
+  );
 }

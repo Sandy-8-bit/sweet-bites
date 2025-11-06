@@ -60,7 +60,7 @@ export const AboutSection = () => {
 							<FaPhone className='fill-pink w-5 h-5' />
 						</div>
 						<div>
-							<p className='font-bold'>(+91) 98765 43210</p>
+							<p className='font-bold'>8431854288</p>
 							<p>Contact Us</p>
 						</div>
 					</div>
