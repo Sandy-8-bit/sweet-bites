@@ -20,7 +20,7 @@ export const ContactOrder = () => {
             CITB Plot No 59, <br />
             Near Bandemma Temple, <br />
             Gandhinagar, Dharwad - 580004 <br />
-            📞 <a href="tel:+919876543210" className="underline hover:text-gray-200">+91 8431854288</a>
+            📞 <a href="tel:+918431854288" className="underline hover:text-gray-200">+91 8431854288</a>
           </p>
 
           {/* Clickable Map Link */}
