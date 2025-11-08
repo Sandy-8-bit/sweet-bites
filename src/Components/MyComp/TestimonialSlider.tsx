@@ -18,35 +18,35 @@ const testimonials: Testimonial[] = [
     quote: "The chocolate cake was absolutely divine! Every bite melted in my mouth.", 
     name: "Rohan Mehta", 
     username: "@rohanmehta", 
-    avatar: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D" 
+    avatar: "https://cdn-icons-png.flaticon.com/512/149/149071.png" 
   },
   { 
     id: 2, 
     quote: "Amazing variety of cakes and pastries! The staff was super friendly too.", 
     name: "Priya ", 
     username: "@priya", 
-    avatar: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D" 
+    avatar: "https://cdn-icons-png.flaticon.com/512/149/149071.png" 
   },
   { 
     id: 3, 
     quote: "Ordered a custom birthday cake for my daughter – it was perfect and delicious!", 
     name: "Ankit Verma", 
     username: "@ankitverma", 
-    avatar: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D" 
+    avatar: "https://cdn-icons-png.flaticon.com/512/149/149071.png" 
   },
   { 
     id: 4, 
     quote: "Fresh ingredients, gorgeous presentation, and the taste? Out of this world!", 
     name: "Neha", 
     username: "@neha", 
-    avatar: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D" 
+    avatar: "https://cdn-icons-png.flaticon.com/512/149/149071.png" 
   },
   { 
     id: 5, 
     quote: "I love how creative their cakes are! Every celebration is made extra special.", 
     name: "Aarav ", 
     username: "@aarav", 
-    avatar: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D" 
+    avatar: "https://cdn-icons-png.flaticon.com/512/149/149071.png" 
   },
 ];
 
