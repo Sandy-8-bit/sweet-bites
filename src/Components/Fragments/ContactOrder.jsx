@@ -56,9 +56,19 @@ export const ContactOrder = () => {
   </a>
 </div>
 
-         <p className="text-xs text-center te mt-4 text-white">
-        © 2025 | Developed by Eight-Bit Technologies.
-      </p>
+        <p className="text-xs text-center mt-4 text-white">
+  © 2025 | Developed by{" "}
+  <a
+    href="https://cheersdigitalmarketing.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-white underline hover:text-gray-300 transition-colors"
+  >
+   cheersdigitalmarketing.com
+  </a>
+  .
+</p>
+
       </div>
 
      
